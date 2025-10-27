@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>eCommerce</title>
+  <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.png' %}" />
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+</head>
+<body>
+  <header class="bg-body-tertiary">{% include 'components/header.html' %}</header>
+  {% block main %}
+  {% endblock %}
+  {% block main_home %}
+  <main class="container">
+    <h1>Home</h1>
+    <section>{% include 'components/calltoaction.html' %}</section>
+    <section>{% include 'components/promo.html' %}</section>
+    <section>{% include 'components/categories.html' %}</section>
+    <section>{% include 'components/features.html' %}</section>
+  </main>
+  {% endblock %}
+  <footer class="bg-body-tertiary">{% include 'components/footer.html' %}</footer>
+  <script src="{% static 'js/bootstrap5.js' %}"></script>
+</body>
+</html>
